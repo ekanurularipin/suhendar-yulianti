@@ -1,0 +1,447 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,300;1,400&family=Dancing+Script:wght@400;600;700&family=Playball&display=swap");
+
+.font-dancing {
+  font-family: "Dancing Script", cursive;
+}
+
+.font-playball {
+  font-family: "Playball", cursive;
+}
+
+* {
+  font-family: "Open Sans", cursive;
+}
+
+.bg-berem {
+  background-color: rgba(222, 222, 222, 0.39);
+}
+.date {
+  background-color: rgba(245, 245, 245, 0.39) transparent;
+}
+#date {
+  background-image: url(../img/bunga.png);
+}
+.text-berem {
+  color: #00000050;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../img/bunga.png);
+  animation: change 40s infinite ease-in-out;
+  -webkit-animation: change 40s infinite ease-in-out;
+  opacity: 0.9;
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+section,
+header,
+.container,
+.modal-content {
+  position: relative;
+  z-index: 2;
+}
+
+.text-wakwak {
+  background-color: #ffffff;
+}
+
+.bg-fee {
+  background-color: #00000033;
+  border-radius: 25px;
+  border: 3px solid #fff;
+  box-shadow: 100px 100px 100px 100px rgb(255, 255, 255);
+}
+
+.bg-kulit {
+  background-color: #ffffff;
+}
+
+.fs-60 {
+  font-size: 100px;
+}
+
+.fs-45 {
+  font-size: 45px;
+}
+
+.fs-40 {
+  font-size: 40px;
+}
+
+.scale {
+  overflow: hidden;
+  transition: 0.5s;
+}
+.scale:hover {
+  transform: scale(1.05);
+}
+
+.norek {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+.history {
+  background-image: url(../img/bunga.png);
+  background-size: cover;
+}
+.history2 {
+  background-image: url(../img/bunga.png);
+  background-size: cover;
+}
+.depan {
+  width: 100%;
+  height: 100%;
+  position: absolute; /* <-- agar menempel penuh */
+  top: 0;
+  left: 0;
+  background-image: url(../img/bunga.png);
+  background-size: cover;
+  background-position: center;
+  animation: change 40s infinite ease-in-out;
+  z-index: 1;
+}
+#galeri {
+  background: linear-gradient(180deg, #0000004d 0%, #00000057 100%);
+  padding: 60px 0;
+}
+
+#galeri .judul-galeri {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #ebd3d0;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
+}
+
+#galeri .img-container5 {
+  column-count: 1; /* default: 1 kolom untuk layar kecil */
+  column-gap: 100px; /* jarak antar kolom */
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+#galeri .mySlide5 {
+  break-inside: avoid; /* biar nggak kepecah antar kolom */
+  margin-bottom: 18px;
+}
+
+#galeri .mySlide5 img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  border: 3px solid #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+#galeri .mySlide5 img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(130, 160, 255, 0.6);
+}
+
+@media (max-width: 480px) {
+  #galeri .judul-galeri {
+    font-size: 1.6rem;
+  }
+
+  #galeri .img-container5 {
+    padding: 0 10px;
+    column-gap: 12px;
+  }
+
+  #galeri .mySlide5 img {
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(160, 180, 255, 0.4);
+  }
+}
+
+/* Tablet (lebar > 390px) */
+@media (min-width: 390px) {
+  #galeri .img-container5 {
+    column-count: 2;
+  }
+}
+
+/* Tablet besar / iPad ke atas */
+@media (min-width: 768px) {
+  #galeri .img-container5 {
+    column-count: 3;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  #galeri .img-container5 {
+    column-count: 4;
+  }
+}
+
+.galeri2 {
+  padding: 20px;
+  text-align: center;
+  background-color: var(--primary);
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  color: var(--pastel);
+}
+
+.galeri2 iframe {
+  padding: 5px 5px 15px 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  background-color: white;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.mySlide2 {
+  flex: 1 1 calc(33.333% - 16px); /* Tiga gambar per baris di desktop */
+  max-width: calc(33.333% - 16px);
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+.img-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+.mySlide2 img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 1.5rem !important;
+  }
+  #front-image {
+    display: none;
+  }
+  #front-text {
+    padding-top: 40%;
+    height: 100vh;
+    z-index: 3;
+    font-size: 20px;
+    background-image: url(../img/bunga.png);
+    background-size: cover;
+    animation: change 40s infinite ease-in-out;
+    -webkit-animation: change 40s infinite ease-in-out;
+    opacity: 0.9;
+  }
+  #front-text::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+#front-image img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.bg-wakwak::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 544); /* Hitam transparan */
+  z-index: 1;
+}
+.history::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.632); /* Hitam transparan */
+  z-index: 1;
+}
+.history2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.544); /* Hitam transparan */
+  z-index: 1;
+}
+.depan::after {
+  content: "";
+  position: absolute;
+  inset: 0; /* shorthand untuk top, right, bottom, left = 0 */
+  background-color: rgba(0, 0, 0, 0.544); /* overlay hitam transparan */
+  z-index: 2;
+}
+
+.bg-wakwak > * {
+  position: relative;
+  z-index: 2;
+}
+.bg-wakwak .quran {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/bunga.png);
+}
+.bg-wakwak .date {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/bunga.png);
+
+  /* Tambahkan 3 baris di bawah ini */
+  background-repeat: no-repeat; /* Agar gambar tidak duplikat/banyak */
+  background-size: cover; /* Agar gambar menutupi seluruh area kotak */
+}
+.history > * {
+  position: relative;
+  z-index: 2;
+}
+.history2 > * {
+  position: relative;
+  z-index: 2;
+}
+.block {
+  display: flex; /* Mengaktifkan mode flex */
+  justify-content: center; /* Menaruh icon di tengah secara horizontal */
+  align-items: center; /* Menaruh icon di tengah secara vertikal */
+  gap: 30px; /* MEMBERIKAN JARAK antar icon (ubah angka ini sesuai selera) */
+  margin-top: 10px; /* Jarak ke atas jika diperlukan */
+}
+
+.block a i {
+  font-size: 30px; /* MEMPERBESAR ICON (Ganti 50px sesuai keinginan) */
+  color: white; /* Warna icon */
+  transition: transform 0.3s; /* Efek halus saat dihover */
+}
+
+.block a i:hover {
+  transform: scale(1.2); /* Efek sedikit membesar saat disentuh kursor */
+}
+small a {
+  text-decoration: none; /* Menghilangkan garis bawah */
+  color: inherit; /* Mengikuti warna teks induknya (misal putih) */
+}
+
+/* Opsional: Memberi efek sedikit terang saat kursor di atasnya */
+small a:hover {
+  opacity: 0.8;
+}
+@keyframes change {
+  0% {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../img/bunga.png);
+  }
+  14% {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../img/bunga.png);
+  }
+  28% {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../img/bunga.png);
+  }
+  42% {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../img/bunga.png);
+  }
+  57% {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../img/bunga.png);
+  }
+  71% {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../img/bunga.png);
+  }
+  85% {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../img/bunga.png);
+  }
+  100% {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../img/bunga.png);
+  } /*kembali ke awal */
+}
+@-webkit-keyframes change {
+  0% {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../img/bunga.png);
+  }
+  14% {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../img/bunga.png);
+  }
+  28% {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../img/bunga.png);
+  }
+  42% {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../img/bunga.png);
+  }
+  57% {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../img/bunga.png);
+  }
+  71% {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../img/bunga.png);
+  }
+  85% {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../img/bunga.png);
+  }
+  100% {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../img/bunga.png);
+  }
+}
