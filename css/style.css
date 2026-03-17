@@ -13,8 +13,13 @@
 }
 
 .bg-berem {
-  background-color: rgba(222, 222, 222, 0.39);
+  background-color: rgba(0, 0, 0, 0.711);
+  border-radius: 25px;
+  border: 2px solid #fff;
+
+  font-weight: bold;
 }
+
 .date {
   background-color: rgba(245, 245, 245, 0.39) transparent;
 }
